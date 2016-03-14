@@ -27,10 +27,11 @@ def check_guess(guess)
   else
     @@number = rand(100)
     @@guesses = 5
-    ["You got it right!
-     <p>The SECRET NUMBER is #{guess}</p>", "#b0e0e6"]
+    ["You got it right!</p>
+<p>The SECRET NUMBER is #{guess}", "#b0e0e6"]
   end
 end
+
 get '/' do
   guess = params['guess'].to_i
   if params['cheat']
